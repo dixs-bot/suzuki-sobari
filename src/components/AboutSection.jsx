@@ -45,7 +45,7 @@ export default function AboutSection() {
           <div className="about-image-wrap reveal">
             <div className="sales-photo-wrap">
               <img
-                src="/images/profil.jpeg"
+                src="/images/profil.png"
                 alt={`${siteConfig.salesName} – Sales Suzuki Bandung & Cimahi di Dealer NJS`}
                 className="sales-photo"
                 loading="lazy"
