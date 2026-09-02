@@ -18,7 +18,7 @@ export const metadata = {
   // SEO TITLE
   // ============================================================
 
-  title: `Dealer Suzuki Bandung & Cimahi | ${siteConfig.businessName} – Kredit Mobil Baru DP Ringan`,
+  title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName} – Kredit Mobil Baru DP Ringan`,
 
   // ============================================================
   // SEO DESCRIPTION
@@ -74,7 +74,7 @@ export const metadata = {
   // ============================================================
 
   openGraph: {
-    title: `Dealer Suzuki Bandung & Cimahi | ${siteConfig.businessName} – Kredit Mobil Baru DP Ringan`,
+    title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName} – Kredit Mobil Baru DP Ringan`,
 
     description:
       `Dealer resmi Suzuki di Bandung & Cimahi. Promo mobil baru, kredit DP ringan, proses cepat, dan layanan after sales. Hubungi ${siteConfig.salesName} - Sales Consultant Suzuki.`,
@@ -95,7 +95,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: `Dealer Suzuki Bandung & Cimahi – ${siteConfig.businessName}`,
+    title: `Dealer Suzuki Bandung Jawa barat – ${siteConfig.businessName}`,
 
     description:
       "Promo & kredit mobil baru Suzuki dengan DP ringan di Bandung & Cimahi.",
