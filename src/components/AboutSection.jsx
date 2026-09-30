@@ -62,10 +62,13 @@ export default function AboutSection() {
               Tentang <span className="title-accent">Kami</span>
             </h2>
             <p className="about-lead">
-              Halo! Saya <strong>{siteConfig.salesName}</strong>, Sales Consultant resmi di <strong>{siteConfig.dealerName}</strong>.
+              Halo, salam sehat dan salam sejahtera. Saya <strong>Muhammad Sobari</strong>,Sales Executive &amp; Consultant resmi dari Suzuki Bandung &amp; Jawa Barat
+              (<strong>NJS Ahmad Yani</strong>).
             </p>
             <p>
-              Dengan pengalaman melayani ratusan pelanggan di Bandung Raya, Cimahi, dan Jawa Barat, saya berkomitmen memberikan solusi terbaik untuk kebutuhan kendaraan pribadi maupun niaga Anda.
+              Mengutamakan pelayanan terbaik bagi seluruh Sahabat Suzuki, Sobari berkomitmen untuk memberikan pelayanan yang profesional, ramah, dan terpercaya dalam membantu memenuhi setiap kebutuhan kendaraan Anda.
+             Bagi Sobari, setiap kendaraan bukan sekadar sebuah pilihan, tetapi bagian dari perjalanan dan impian setiap keluarga. Karena itu, menjadi bagian dari perjalanan Sahabat Suzuki dalam mewujudkan kendaraan impian merupakan sebuah kebanggaan dan kehormatan.
+             Mari wujudkan kendaraan impian Anda bersama Suzuki.
             </p>
             <div className="about-features">
               <div className="about-feature-item">
@@ -101,8 +104,7 @@ export default function AboutSection() {
             <span className="title-accent">Lokasi</span> Dealer Suzuki NJS Ahmad Yani Bandung
           </h2>
           <p className="section-subtitle">
-            Kunjungi showroom Suzuki NJS Ahmad Yani Bandung untuk melihat unit mobil Suzuki, test drive, dan konsultasi kredit mobil.
-          </p>
+           Kunjungi Dealer Suzuki NJS Ahmad Yani Bandung untuk melihat-lihat unit mobil Suzuki, Test Drive, dan Konsultasi kebutuhan kendaraan anda.
 
           <div className="map-container" style={{ marginTop: "24px", borderRadius: "16px", overflow: "hidden" }}>
             <iframe
