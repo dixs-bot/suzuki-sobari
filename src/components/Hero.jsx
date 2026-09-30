@@ -14,9 +14,9 @@ export default function Hero() {
             {siteConfig.dealerName}
           </h1>
           <p className="animate-fade-up" style={{ "--delay": "0.3s" }}>
-            Penjualan mobil baru Suzuki untuk wilayah Bandung raya, Cimahi, dan sekitarnya.
-            Dapatkan promo DP ringan, bunga rendah, diskon puluhan juta, serta proses kredit
-            cepat dan dibantu sampai approved!
+           Melayani penjualan mobil baru Suzuki untuk wilayah Bandung Raya, Cimahi, dan sekitarnya dengan pelayanan yang profesional dan terpercaya.
+           Nikmati berbagai program promo menarik, mulai dari DP ringan, bunga kompetitif, hingga potongan harga hingga puluhan juta rupiah. Kami juga siap membantu proses simulasi kredit, pengajuan, hingga pendampingan proses approval, agar pengalaman memiliki mobil Suzuki menjadi lebih mudah, cepat, dan nyaman.
+           Butuh mobil untuk keluarga, usaha, maupun kebutuhan sehari-hari? Kami siap membantu menemukan pilihan Suzuki yang sesuai dengan kebutuhan dan kemampuan Anda.
           </p>
           <div className="hero-actions animate-fade-up" style={{ "--delay": "0.45s" }}>
             <a href="#produk" className="btn btn-outline">
