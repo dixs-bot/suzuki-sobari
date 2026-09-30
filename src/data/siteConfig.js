@@ -6,7 +6,7 @@ export const siteConfig = {
   phone: "+6282295095740",
   phoneNumberFormatted: "0822-9509-5740",
   whatsappNumber: "6282295095740",
-  email: "sobarisuzuki.bandung@gmail.com",
+  email: "muhammadsobari3393@gail.com",
   address: "Jl. A. Yani No.259, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114, Indonesia",
   mapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.535!2d107.6316605!3d-6.9147128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e781f491aa2d%3A0x1eabdb84d1cee61b!2sSuzuki%20Ahmad%20Yani%20PT%20Nusantara%20Jaya%20Sentosa!5e0!3m2!1sen!2sid!4v1750000000000",
   siteUrl: "https://suzuki-sobari.vercel.app/",
