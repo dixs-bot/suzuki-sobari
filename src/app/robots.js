@@ -1,7 +1,7 @@
 import { siteConfig } from "../data/siteConfig";
 
 export default function robots() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/$/, "");
+  const baseUrl = "https://suzukiinfobandung.com";
 
   return {
     rules: [
