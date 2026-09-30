@@ -8,7 +8,7 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      q: "Berapa DP minimal mobil Suzuki di Bandung & Cimahi?",
+      q: "Info Simulasi Pembelian Mobil Suzuki Bandung, Cimahi, & Jawa Barat?",
       a: `DP minimal mengikuti ketentuan leasing, namun banyak paket promo DP ringan mulai dari belasan juta untuk tipe tertentu. Hubungi ${siteConfig.salesName} via WhatsApp untuk cek promo terbaru yang sesuai dengan profil Anda.`
     },
     {
@@ -20,7 +20,7 @@ export default function FaqSection() {
       a: "Ya, kami melayani konsumen dari Bandung, Cimahi, dan sekitarnya seperti Padalarang, Lembang, Rancaekek, hingga Kabupaten Bandung, Subang, Sumedang, dan Garut."
     },
     {
-      q: `Di mana lokasi dealer ${siteConfig.dealerName}?`,
+      q: `Sobari bisa ke rumah saya sekarang? Saya mau Test Drive & info lebih lanjut mengenai mobi Suzuki ${siteConfig.dealerName}?`,
       a: `Dealer berlokasi di ${siteConfig.address}. Anda bisa datang langsung atau janjian test drive terlebih dahulu dengan sales.`
     }
   ];
