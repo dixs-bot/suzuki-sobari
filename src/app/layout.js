@@ -1,42 +1,27 @@
 import "./globals.css";
 import { siteConfig } from "../data/siteConfig";
 
+const siteUrl = "https://suzukiinfobandung.com";
+
 export const viewport = {
   themeColor: "#0B1F3A",
   width: "device-width",
-  initialScale: 1.0,
+  initialScale: 1,
 };
 
 export const metadata = {
-  // ============================================================
-  // BASE URL
-  // ============================================================
+  metadataBase: new URL(siteUrl),
 
-  metadataBase: new URL(siteConfig.siteUrl),
-
-  // ============================================================
-  // SEO TITLE
-  // ============================================================
-
-  title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName} – Kredit Mobil Baru DP Ringan`,
-
-  // ============================================================
-  // SEO DESCRIPTION
-  // ============================================================
+  title: {
+    default: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName}`,
+    template: `%s | ${siteConfig.businessName}`,
+  },
 
   description:
-    "Dealer Suzuki Nusantara Jaya Sentosa Ahmad Yani melayani pembelian, servis, dan spare part mobil Suzuki di wilayah Bandung Raya, Subang, Sumedang, Garut, Tasikmalaya, Ciamis, Banjar, dan Pangandaran.",
-
-  // ============================================================
-  // SEO KEYWORDS
-  // ============================================================
+    "Dealer Suzuki Nusantara Jaya Sentosa Ahmad Yani melayani pembelian mobil Suzuki baru, promo, kredit, tukar tambah, test drive, servis, dan spare part resmi untuk wilayah Bandung, Cimahi, dan Jawa Barat.",
 
   keywords:
-    "Dealer Suzuki Bandung, Dealer Suzuki Cimahi, Dealer Suzuki Ahmad Yani, Suzuki Bandung, Suzuki Cimahi, kredit mobil Suzuki, promo Suzuki Bandung, mobil Suzuki Bandung, harga mobil Suzuki, dealer mobil Suzuki",
-
-  // ============================================================
-  // AUTHOR
-  // ============================================================
+    "Dealer Suzuki Bandung, Dealer Suzuki Cimahi, Dealer Suzuki Ahmad Yani, Suzuki Bandung, Suzuki Cimahi, kredit mobil Suzuki, promo Suzuki Bandung, mobil Suzuki Bandung, harga mobil Suzuki, dealer mobil Suzuki, Suzuki Jawa Barat",
 
   authors: [
     {
@@ -44,71 +29,208 @@ export const metadata = {
     },
   ],
 
-  // ============================================================
-  // GOOGLE SEARCH ENGINE
-  // ============================================================
+  creator: siteConfig.businessName,
+
+  publisher: siteConfig.businessName,
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
-
-  // ============================================================
-  // GOOGLE SEARCH CONSOLE VERIFICATION
-  // ============================================================
 
   verification: {
     google: "6N-Mfe4cyHyY-Fl9Fo4-iOUfmIVjc_IebHSCy8PsuRA",
   },
 
-  // ============================================================
-  // CANONICAL URL
-  // ============================================================
-
   alternates: {
-    canonical: siteConfig.siteUrl,
+    canonical: siteUrl,
   },
 
-  // ============================================================
-  // OPEN GRAPH
-  // ============================================================
-
   openGraph: {
-    title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName} – Kredit Mobil Baru DP Ringan`,
-
-    description:
-      `Dealer resmi Suzuki di Bandung & Cimahi. Promo mobil baru, kredit DP ringan, proses cepat, dan layanan after sales. Hubungi ${siteConfig.salesName} - Sales Consultant Suzuki.`,
-
     type: "website",
 
-    url: siteConfig.siteUrl,
+    locale: "id_ID",
+
+    url: siteUrl,
 
     siteName: siteConfig.businessName,
 
-    locale: "id_ID",
-  },
+    title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName}`,
 
-  // ============================================================
-  // TWITTER / SOCIAL MEDIA
-  // ============================================================
+    description:
+      `Dealer Suzuki di Bandung dan Jawa Barat. Promo mobil Suzuki baru, kredit DP ringan, tukar tambah, test drive, dan konsultasi bersama ${siteConfig.salesName}.` ,
+
+    images: [
+      {
+        url: `${siteUrl}/images/profil.png`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.businessName} - Dealer Suzuki Bandung Jawa Barat`,
+      },
+    ],
+  },
 
   twitter: {
     card: "summary_large_image",
 
-    title: `Dealer Suzuki Bandung Jawa barat – ${siteConfig.businessName}`,
+    title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName}`,
 
     description:
-      "Promo & kredit mobil baru Suzuki dengan DP ringan di Bandung & Cimahi.",
+      "Promo dan kredit mobil baru Suzuki dengan DP ringan di Bandung, Cimahi, dan Jawa Barat.",
+
+    images: [`${siteUrl}/images/profil.png`],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
 };
 
 export default function RootLayout({ children }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+
+    name: siteConfig.dealerName,
+
+    description:
+      "Dealer Suzuki di Bandung Jawa Barat yang melayani penjualan mobil Suzuki baru, promo, kredit, tukar tambah, test drive, servis, dan spare part.",
+
+    url: siteUrl,
+
+    telephone: siteConfig.phone,
+
+    priceRange: "$$",
+
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.address,
+      addressLocality: "Bandung",
+      addressRegion: "Jawa Barat",
+      postalCode: "40114",
+      addressCountry: "ID",
+    },
+
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.dealerCoords.lat,
+      longitude: siteConfig.dealerCoords.lng,
+    },
+
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Bandung",
+      },
+      {
+        "@type": "City",
+        name: "Cimahi",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Jawa Barat",
+      },
+    ],
+
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+
+        opens: "08:00",
+        closes: "17:00",
+      },
+    ],
+  };
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+
+    mainEntity: [
+      {
+        "@type": "Question",
+
+        name:
+          "Berapa DP minimal mobil Suzuki di Bandung dan Cimahi?",
+
+        acceptedAnswer: {
+          "@type": "Answer",
+
+          text:
+            `DP minimal mengikuti ketentuan leasing dan program yang sedang berlaku. ` +
+            `Untuk informasi promo dan simulasi kredit terbaru, silakan hubungi ` +
+            `${siteConfig.salesName} melalui WhatsApp ${siteConfig.phone}.`,
+        },
+      },
+
+      {
+        "@type": "Question",
+
+        name:
+          "Apakah bisa tukar tambah mobil lama dengan mobil Suzuki baru?",
+
+        acceptedAnswer: {
+          "@type": "Answer",
+
+          text:
+            "Bisa. Konsumen dapat berkonsultasi mengenai proses tukar tambah mobil lama dengan mobil Suzuki baru, termasuk proses appraisal dan pengurusan dokumen.",
+        },
+      },
+
+      {
+        "@type": "Question",
+
+        name:
+          `Apakah ${siteConfig.dealerName} melayani konsumen di luar Kota Bandung?`,
+
+        acceptedAnswer: {
+          "@type": "Answer",
+
+          text:
+            "Ya. Kami melayani konsumen dari Bandung, Cimahi, Kabupaten Bandung, Bandung Barat, dan wilayah Jawa Barat lainnya.",
+        },
+      },
+
+      {
+        "@type": "Question",
+
+        name:
+          `Di mana lokasi dealer ${siteConfig.dealerName}?`,
+
+        acceptedAnswer: {
+          "@type": "Answer",
+
+          text:
+            `Dealer berlokasi di ${siteConfig.address}. ` +
+            "Konsumen dapat datang langsung untuk konsultasi, melihat unit, atau melakukan test drive.",
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="id">
       <head>
-        {/* =====================================================
-            GOOGLE FONTS
-        ====================================================== */}
+
+        {/* GOOGLE FONTS */}
 
         <link
           rel="preconnect"
@@ -126,151 +248,29 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
-        {/* =====================================================
-            AUTO DEALER STRUCTURED DATA
-        ====================================================== */}
+        {/* AUTO DEALER STRUCTURED DATA */}
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "AutoDealer",
-
-              name: siteConfig.dealerName,
-
-              telephone: siteConfig.phone,
-
-              priceRange: "$$",
-
-              url: siteConfig.siteUrl,
-
-              address: {
-                "@type": "PostalAddress",
-
-                streetAddress:
-                  "Jl. A. Yani No.259, Cihapit, Kec. Bandung Wetan",
-
-                addressLocality: "Kota Bandung",
-
-                addressRegion: "Jawa Barat",
-
-                postalCode: "40114",
-
-                addressCountry: "ID",
-              },
-
-              geo: {
-                "@type": "GeoCoordinates",
-
-                latitude: siteConfig.dealerCoords.lat,
-
-                longitude: siteConfig.dealerCoords.lng,
-              },
-
-              areaServed: [
-                "Bandung",
-                "Cimahi",
-                "Soekarno Hatta Bandung",
-                "Gedebage",
-                "Ahmad Yani",
-                "Jawa Barat",
-              ],
-
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday",
-                  ],
-
-                  opens: "08:00",
-
-                  closes: "17:00",
-                },
-              ],
-            }),
+            __html: JSON.stringify(structuredData),
           }}
         />
 
-        {/* =====================================================
-            FAQ STRUCTURED DATA
-        ====================================================== */}
+        {/* FAQ STRUCTURED DATA */}
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-
-              "@type": "FAQPage",
-
-              mainEntity: [
-                {
-                  "@type": "Question",
-
-                  name:
-                    "Berapa DP minimal mobil Suzuki di Bandung & Cimahi?",
-
-                  acceptedAnswer: {
-                    "@type": "Answer",
-
-                    text: `DP minimal mengikuti ketentuan leasing, namun banyak paket promo DP ringan mulai dari belasan juta untuk tipe tertentu. Hubungi ${siteConfig.salesName} via WhatsApp (${siteConfig.phone}) untuk cek promo terbaru yang sesuai dengan profil Anda.`,
-                  },
-                },
-
-                {
-                  "@type": "Question",
-
-                  name:
-                    "Apakah bisa tukar tambah mobil lama dengan mobil Suzuki baru?",
-
-                  acceptedAnswer: {
-                    "@type": "Answer",
-
-                    text:
-                      "Bisa. Kami melayani tukar tambah mobil lama Anda ke mobil Suzuki baru, proses dibantu sampai selesai termasuk appraisal unit lama dan pengurusan berkas.",
-                  },
-                },
-
-                {
-                  "@type": "Question",
-
-                  name: `Apakah ${siteConfig.dealerName} melayani luar kota Bandung?`,
-
-                  acceptedAnswer: {
-                    "@type": "Answer",
-
-                    text:
-                      "Ya, kami melayani konsumen dari Bandung, Cimahi, dan sekitarnya seperti Padalarang, Lembang, Rancaekek, hingga Kabupaten Bandung.",
-                  },
-                },
-
-                {
-                  "@type": "Question",
-
-                  name: `Di mana lokasi dealer ${siteConfig.dealerName}?`,
-
-                  acceptedAnswer: {
-                    "@type": "Answer",
-
-                    text: `Dealer berlokasi di ${siteConfig.address}. Anda bisa datang langsung atau janjian test drive terlebih dahulu dengan sales.`,
-                  },
-                },
-              ],
-            }),
+            __html: JSON.stringify(faqStructuredData),
           }}
         />
+
       </head>
 
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
