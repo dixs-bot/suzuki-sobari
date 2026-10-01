@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import { siteConfig } from "../data/siteConfig";
 
 const siteUrl = "https://suzukiinfobandung.com";
@@ -55,17 +56,14 @@ export const metadata = {
 
   openGraph: {
     type: "website",
-
     locale: "id_ID",
-
     url: siteUrl,
-
     siteName: siteConfig.businessName,
 
     title: `Dealer Suzuki Bandung Jawa Barat | ${siteConfig.businessName}`,
 
     description:
-      `Dealer Suzuki di Bandung dan Jawa Barat. Promo mobil Suzuki baru, kredit DP ringan, tukar tambah, test drive, dan konsultasi bersama ${siteConfig.salesName}.` ,
+      `Dealer Suzuki di Bandung dan Jawa Barat. Promo mobil Suzuki baru, kredit DP ringan, tukar tambah, test drive, dan konsultasi bersama ${siteConfig.salesName}.`,
 
     images: [
       {
@@ -168,8 +166,7 @@ export default function RootLayout({ children }) {
       {
         "@type": "Question",
 
-        name:
-          "Berapa DP minimal mobil Suzuki di Bandung dan Cimahi?",
+        name: "Berapa DP minimal mobil Suzuki di Bandung dan Cimahi?",
 
         acceptedAnswer: {
           "@type": "Answer",
@@ -270,6 +267,35 @@ export default function RootLayout({ children }) {
 
       <body>
         {children}
+
+        {/* =====================================================
+            GOOGLE ADS TAG
+            Google Ads Conversion / Remarketing
+            ===================================================== */}
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18485977334"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          id="google-ads-tag"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18485977334');
+          `}
+        </Script>
+
       </body>
     </html>
   );
