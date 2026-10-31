@@ -45,4 +45,8 @@ export const deliveryPhotos = [
 { src: "image22.jpg", caption: "" },
 { src: "image23.jpg", caption: "" },
 { src: "image24.jpg", caption: "" },
+{ src: "image25.jpg", caption: "" },
+{ src: "image26.jpg", caption: "" },
+{ src: "image27.jpg", caption: "" },
+{ src: "image28.jpg", caption: "" },
 ];
